@@ -1,0 +1,277 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+    filter: invert(100%);
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    /* display: flex; */
+    font-family: 'Baloo Bhai', cursive;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar ul li{ 
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    opacity: .8;
+    line-height: 40px;
+    text-align: center;
+    /* list-style: none; */
+    font-size: 20px;
+    
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    /* padding: 3px 22px; */
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#navbar ul li ul li{
+    display: none;
+}
+#navbar ul li:hover ul li{
+    display: block;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url(https://cdn.pixabay.com/photo/2016/12/11/22/41/lasagna-1900529_1280.jpg) no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.79;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url(https://cdn.pixabay.com/photo/2017/01/31/09/30/raspberry-2023404_1280.jpg);
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+ 
+/* Image Slider Section */
+.headings{
+    font-size: 4rem;
+    line-height: 2.2;
+    /* letter-spacing: 0.5rem; */
+    text-align: center;
+    color: black;
+    margin-top: 8px;
+    font-family: 'Bree Serif', serif;
+}
+ .maindiv{
+     background-color: rgba(27, 31, 34, 0.85);
+     width: 100%;
+     height: 500px;
+     /* position: absolute; */
+     background: url(https://cdn.pixabay.com/photo/2016/04/09/09/22/pizza-1317699_1280.jpg) no-repeat center center/cover;
+     box-shadow: 4px 4px 5px 5px white;
+     animation: slider 11s infinite linear;
+     
+
+ }
+  @keyframes slider{
+      0%{ background: url(https://cdn.pixabay.com/photo/2016/04/09/09/22/pizza-1317699_1280.jpg) no-repeat center center/cover;}
+      25%{ background: url(https://cdn.pixabay.com/photo/2017/08/01/21/42/food-2568128_1280.jpg) no-repeat center center/cover;}
+      50%{ background: url(https://cdn.pixabay.com/photo/2017/11/16/18/51/kagyana-2955466_1280.jpg) no-repeat center center/cover;}
+      75%{ background: url(https://images.unsplash.com/photo-1585144570839-e429bb95ffb4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1030&q=80)no-repeat center center/cover;}
+
+  }
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    background: url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80) no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
